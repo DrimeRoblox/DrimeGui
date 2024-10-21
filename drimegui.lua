@@ -1,4 +1,3 @@
-
 local DrimeGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local GuiNameHeader = Instance.new("TextLabel")
@@ -20,6 +19,7 @@ local ImageLabel_2 = Instance.new("ImageLabel")
 
 DrimeGui.Name = "DrimeGui"
 DrimeGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+DrimeGui.ResetOnSpawn = false
 
 Frame.Parent = DrimeGui
 Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -200,7 +200,7 @@ ImageLabel_2.ImageColor3 = Color3.fromRGB(255, 0, 0)
 
 -- Scripts:
 
-local function KWXPHZZ_fake_script() -- Frame.Press_Key_To_Open_Gui_V4 
+local function VZGMWM_fake_script() -- Frame.Press_Key_To_Open_Gui_V4 
 	local script = Instance.new('LocalScript', Frame)
 
 	local userInputService = game:GetService("UserInputService")
@@ -222,8 +222,8 @@ local function KWXPHZZ_fake_script() -- Frame.Press_Key_To_Open_Gui_V4
 	end)
 	
 end
-coroutine.wrap(KWXPHZZ_fake_script)()
-local function SCMAT_fake_script() -- TextButton.Script 
+coroutine.wrap(VZGMWM_fake_script)()
+local function SAJR_fake_script() -- TextButton.Script 
 	local script = Instance.new('Script', TextButton)
 
 	local textbutton = script.Parent
@@ -232,8 +232,8 @@ local function SCMAT_fake_script() -- TextButton.Script
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 end
-coroutine.wrap(SCMAT_fake_script)()
-local function DBPYAB_fake_script() -- TextButton_2.Script 
+coroutine.wrap(SAJR_fake_script)()
+local function GBCL_fake_script() -- TextButton_2.Script 
 	local script = Instance.new('Script', TextButton_2)
 
 	local textbutton = script.Parent
@@ -242,8 +242,8 @@ local function DBPYAB_fake_script() -- TextButton_2.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/main/UNCCheckEnv.lua"))()
 	end)
 end
-coroutine.wrap(DBPYAB_fake_script)()
-local function FBUW_fake_script() -- TextButton_3.Script 
+coroutine.wrap(GBCL_fake_script)()
+local function BZBLVT_fake_script() -- TextButton_3.Script 
 	local script = Instance.new('Script', TextButton_3)
 
 	local textbutton = script.Parent
@@ -252,8 +252,8 @@ local function FBUW_fake_script() -- TextButton_3.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/profileaccount/obfuscations/main/mikes_cheat_v1.lua",true))()
 	end)
 end
-coroutine.wrap(FBUW_fake_script)()
-local function ARXJ_fake_script() -- TextButton_4.Script 
+coroutine.wrap(BZBLVT_fake_script)()
+local function KVQX_fake_script() -- TextButton_4.Script 
 	local script = Instance.new('Script', TextButton_4)
 
 	local textbutton = script.Parent
@@ -262,8 +262,8 @@ local function ARXJ_fake_script() -- TextButton_4.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/RealZzHub/Main/main/Main.lua"))()
 	end)
 end
-coroutine.wrap(ARXJ_fake_script)()
-local function MTMDV_fake_script() -- TextButton_5.Script 
+coroutine.wrap(KVQX_fake_script)()
+local function ZDYTEF_fake_script() -- TextButton_5.Script 
 	local script = Instance.new('Script', TextButton_5)
 
 	local textbutton = script.Parent
@@ -272,8 +272,8 @@ local function MTMDV_fake_script() -- TextButton_5.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/refs/heads/main/script"))()
 	end)
 end
-coroutine.wrap(MTMDV_fake_script)()
-local function IPRQK_fake_script() -- ImageLabel.Script 
+coroutine.wrap(ZDYTEF_fake_script)()
+local function LVPDOR_fake_script() -- ImageLabel.Script 
 	local script = Instance.new('Script', ImageLabel)
 
 	local img = script.Parent
@@ -295,8 +295,8 @@ local function IPRQK_fake_script() -- ImageLabel.Script
 		task.wait(0.1)
 	end
 end
-coroutine.wrap(IPRQK_fake_script)()
-local function KJUX_fake_script() -- ImageLabel_2.Script 
+coroutine.wrap(LVPDOR_fake_script)()
+local function CNIQZG_fake_script() -- ImageLabel_2.Script 
 	local script = Instance.new('Script', ImageLabel_2)
 
 	local img = script.Parent
@@ -318,8 +318,8 @@ local function KJUX_fake_script() -- ImageLabel_2.Script
 		task.wait(0.15)
 	end
 end
-coroutine.wrap(KJUX_fake_script)()
-local function PJWF_fake_script() -- Frame.Smooth GUI Dragging 
+coroutine.wrap(CNIQZG_fake_script)()
+local function ANKNA_fake_script() -- Frame.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -376,4 +376,4 @@ local function PJWF_fake_script() -- Frame.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(PJWF_fake_script)()
+coroutine.wrap(ANKNA_fake_script)()
