@@ -10,6 +10,7 @@ local TextButton_2 = Instance.new("TextButton")
 local TextButton_3 = Instance.new("TextButton")
 local TextButton_4 = Instance.new("TextButton")
 local TextButton_5 = Instance.new("TextButton")
+local TextButton_6 = Instance.new("TextButton")
 local TextLabel_2 = Instance.new("TextLabel")
 local ImageLabel = Instance.new("ImageLabel")
 local TextLabel_3 = Instance.new("TextLabel")
@@ -152,6 +153,19 @@ TextButton_5.TextScaled = true
 TextButton_5.TextSize = 14.000
 TextButton_5.TextWrapped = true
 
+TextButton_6.Parent = ScrollingFrame
+TextButton_6.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.BorderSizePixel = 0
+TextButton_6.Position = UDim2.new(0, 0, 0.0949999988, 0)
+TextButton_6.Size = UDim2.new(0, 92, 0, 17)
+TextButton_6.Font = Enum.Font.SourceSans
+TextButton_6.Text = "Chat Bypass"
+TextButton_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.TextScaled = true
+TextButton_6.TextSize = 14.000
+TextButton_6.TextWrapped = true
+
 TextLabel_2.Parent = Frame_3
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
@@ -200,7 +214,7 @@ ImageLabel_2.ImageColor3 = Color3.fromRGB(255, 0, 0)
 
 -- Scripts:
 
-local function VZGMWM_fake_script() -- Frame.Press_Key_To_Open_Gui_V4 
+local function GFXJ_fake_script() -- Frame.Press_Key_To_Open_Gui_V4 
 	local script = Instance.new('LocalScript', Frame)
 
 	local userInputService = game:GetService("UserInputService")
@@ -222,8 +236,8 @@ local function VZGMWM_fake_script() -- Frame.Press_Key_To_Open_Gui_V4
 	end)
 	
 end
-coroutine.wrap(VZGMWM_fake_script)()
-local function SAJR_fake_script() -- TextButton.Script 
+coroutine.wrap(GFXJ_fake_script)()
+local function OBEKAU_fake_script() -- TextButton.Script 
 	local script = Instance.new('Script', TextButton)
 
 	local textbutton = script.Parent
@@ -232,8 +246,8 @@ local function SAJR_fake_script() -- TextButton.Script
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 end
-coroutine.wrap(SAJR_fake_script)()
-local function GBCL_fake_script() -- TextButton_2.Script 
+coroutine.wrap(OBEKAU_fake_script)()
+local function ELRYU_fake_script() -- TextButton_2.Script 
 	local script = Instance.new('Script', TextButton_2)
 
 	local textbutton = script.Parent
@@ -242,8 +256,8 @@ local function GBCL_fake_script() -- TextButton_2.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/main/UNCCheckEnv.lua"))()
 	end)
 end
-coroutine.wrap(GBCL_fake_script)()
-local function BZBLVT_fake_script() -- TextButton_3.Script 
+coroutine.wrap(ELRYU_fake_script)()
+local function GJOHR_fake_script() -- TextButton_3.Script 
 	local script = Instance.new('Script', TextButton_3)
 
 	local textbutton = script.Parent
@@ -252,8 +266,8 @@ local function BZBLVT_fake_script() -- TextButton_3.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/profileaccount/obfuscations/main/mikes_cheat_v1.lua",true))()
 	end)
 end
-coroutine.wrap(BZBLVT_fake_script)()
-local function KVQX_fake_script() -- TextButton_4.Script 
+coroutine.wrap(GJOHR_fake_script)()
+local function VWYLJTD_fake_script() -- TextButton_4.Script 
 	local script = Instance.new('Script', TextButton_4)
 
 	local textbutton = script.Parent
@@ -262,8 +276,8 @@ local function KVQX_fake_script() -- TextButton_4.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/RealZzHub/Main/main/Main.lua"))()
 	end)
 end
-coroutine.wrap(KVQX_fake_script)()
-local function ZDYTEF_fake_script() -- TextButton_5.Script 
+coroutine.wrap(VWYLJTD_fake_script)()
+local function SDEP_fake_script() -- TextButton_5.Script 
 	local script = Instance.new('Script', TextButton_5)
 
 	local textbutton = script.Parent
@@ -272,8 +286,18 @@ local function ZDYTEF_fake_script() -- TextButton_5.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/refs/heads/main/script"))()
 	end)
 end
-coroutine.wrap(ZDYTEF_fake_script)()
-local function LVPDOR_fake_script() -- ImageLabel.Script 
+coroutine.wrap(SDEP_fake_script)()
+local function EBXK_fake_script() -- TextButton_6.Script 
+	local script = Instance.new('Script', TextButton_6)
+
+	local textbutton = script.Parent
+	
+	textbutton.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/1price/usercreation/refs/heads/main/UserCreation.lua", true))()
+	end)
+end
+coroutine.wrap(EBXK_fake_script)()
+local function XCXAVB_fake_script() -- ImageLabel.Script 
 	local script = Instance.new('Script', ImageLabel)
 
 	local img = script.Parent
@@ -295,8 +319,8 @@ local function LVPDOR_fake_script() -- ImageLabel.Script
 		task.wait(0.1)
 	end
 end
-coroutine.wrap(LVPDOR_fake_script)()
-local function CNIQZG_fake_script() -- ImageLabel_2.Script 
+coroutine.wrap(XCXAVB_fake_script)()
+local function OBBSF_fake_script() -- ImageLabel_2.Script 
 	local script = Instance.new('Script', ImageLabel_2)
 
 	local img = script.Parent
@@ -318,8 +342,8 @@ local function CNIQZG_fake_script() -- ImageLabel_2.Script
 		task.wait(0.15)
 	end
 end
-coroutine.wrap(CNIQZG_fake_script)()
-local function ANKNA_fake_script() -- Frame.Smooth GUI Dragging 
+coroutine.wrap(OBBSF_fake_script)()
+local function XAWVPVY_fake_script() -- Frame.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -376,4 +400,4 @@ local function ANKNA_fake_script() -- Frame.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(ANKNA_fake_script)()
+coroutine.wrap(XAWVPVY_fake_script)()
