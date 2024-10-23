@@ -1,3 +1,5 @@
+-- Removed Mikes Cheat :(
+
 local DrimeGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local GuiNameHeader = Instance.new("TextLabel")
@@ -45,6 +47,7 @@ GuiNameHeader.TextColor3 = Color3.fromRGB(255, 255, 255)
 GuiNameHeader.TextScaled = true
 GuiNameHeader.TextSize = 14.000
 GuiNameHeader.TextWrapped = true
+GuiNameHeader.Font = Enum.Font.Michroma
 
 Frame_2.Parent = Frame
 Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -121,7 +124,7 @@ TextButton_3.BorderSizePixel = 0
 TextButton_3.Position = UDim2.new(0, 0, 0.0500000007, 0)
 TextButton_3.Size = UDim2.new(0, 92, 0, 17)
 TextButton_3.Font = Enum.Font.SourceSans
-TextButton_3.Text = "Mike's Cheat"
+TextButton_3.Text = "Go Flying (fling self)"
 TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.TextScaled = true
 TextButton_3.TextSize = 14.000
@@ -196,7 +199,7 @@ TextLabel_3.BorderSizePixel = 0
 TextLabel_3.Position = UDim2.new(0.213414639, 0, 0.947365105, 0)
 TextLabel_3.Size = UDim2.new(0, 338, 0, 12)
 TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "Press F to open/close this gui"
+TextLabel_3.Text = "Press Tilde Key (~) to open/close this gui"
 TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_3.TextScaled = true
 TextLabel_3.TextSize = 14.000
@@ -214,14 +217,14 @@ ImageLabel_2.ImageColor3 = Color3.fromRGB(255, 0, 0)
 
 -- Scripts:
 
-local function GFXJ_fake_script() -- Frame.Press_Key_To_Open_Gui_V4 
+local function LTYPSHW_fake_script() -- Frame.keygui 
 	local script = Instance.new('LocalScript', Frame)
 
 	local userInputService = game:GetService("UserInputService")
 	
 	local ui_Item = script.Parent
 	
-	local input_Key = Enum.KeyCode.F
+	local input_Key = Enum.KeyCode.Tilde
 	
 	userInputService.InputBegan:Connect(function(input)
 		if input.KeyCode == input_Key then
@@ -236,8 +239,8 @@ local function GFXJ_fake_script() -- Frame.Press_Key_To_Open_Gui_V4
 	end)
 	
 end
-coroutine.wrap(GFXJ_fake_script)()
-local function OBEKAU_fake_script() -- TextButton.Script 
+coroutine.wrap(LTYPSHW_fake_script)()
+local function MRIBSLJ_fake_script() -- TextButton.Script 
 	local script = Instance.new('Script', TextButton)
 
 	local textbutton = script.Parent
@@ -246,8 +249,8 @@ local function OBEKAU_fake_script() -- TextButton.Script
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 end
-coroutine.wrap(OBEKAU_fake_script)()
-local function ELRYU_fake_script() -- TextButton_2.Script 
+coroutine.wrap(MRIBSLJ_fake_script)()
+local function CQQU_fake_script() -- TextButton_2.Script 
 	local script = Instance.new('Script', TextButton_2)
 
 	local textbutton = script.Parent
@@ -256,18 +259,43 @@ local function ELRYU_fake_script() -- TextButton_2.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/main/UNCCheckEnv.lua"))()
 	end)
 end
-coroutine.wrap(ELRYU_fake_script)()
-local function GJOHR_fake_script() -- TextButton_3.Script 
-	local script = Instance.new('Script', TextButton_3)
+coroutine.wrap(CQQU_fake_script)()
+local function HZRZXE_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
 
-	local textbutton = script.Parent
+	local textButton = script.Parent
+	textButton.MouseButton1Down:Connect(function()
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
 	
-	textbutton.MouseButton1Down:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/profileaccount/obfuscations/main/mikes_cheat_v1.lua",true))()
+		-- Make the player sit
+		humanoid.Sit = true
+	
+		-- Add a strong and instant BodyVelocity to fling the player
+		local bodyVelocity = Instance.new("BodyVelocity")
+		bodyVelocity.Velocity = Vector3.new(math.random(-1000,1000), 1000, math.random(-1000,1000)) -- Extreme velocity for instant fling
+		bodyVelocity.P = 3000 -- High power to ensure instant movement
+		bodyVelocity.Parent = character.PrimaryPart
+	
+		-- Add a BodyAngularVelocity to spin the player really fast
+		local bodyAngularVelocity = Instance.new("BodyAngularVelocity")
+		bodyAngularVelocity.AngularVelocity = Vector3.new(math.random(-50,50), math.random(-50,50), math.random(-50,50)) -- Increased angular velocity for faster spin
+		bodyAngularVelocity.MaxTorque = Vector3.new(100000, 100000, 100000) -- High torque to ensure strong spin
+		bodyAngularVelocity.Parent = character.PrimaryPart
+	
+		-- Unsit after 2 seconds
+		wait(2)
+		humanoid.Sit = false
+	
+		-- Clean up
+		bodyVelocity:Destroy()
+		bodyAngularVelocity:Destroy()
 	end)
+	
 end
-coroutine.wrap(GJOHR_fake_script)()
-local function VWYLJTD_fake_script() -- TextButton_4.Script 
+coroutine.wrap(HZRZXE_fake_script)()
+local function EMFL_fake_script() -- TextButton_4.Script 
 	local script = Instance.new('Script', TextButton_4)
 
 	local textbutton = script.Parent
@@ -276,8 +304,8 @@ local function VWYLJTD_fake_script() -- TextButton_4.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/RealZzHub/Main/main/Main.lua"))()
 	end)
 end
-coroutine.wrap(VWYLJTD_fake_script)()
-local function SDEP_fake_script() -- TextButton_5.Script 
+coroutine.wrap(EMFL_fake_script)()
+local function WWXAJ_fake_script() -- TextButton_5.Script 
 	local script = Instance.new('Script', TextButton_5)
 
 	local textbutton = script.Parent
@@ -286,8 +314,8 @@ local function SDEP_fake_script() -- TextButton_5.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/refs/heads/main/script"))()
 	end)
 end
-coroutine.wrap(SDEP_fake_script)()
-local function EBXK_fake_script() -- TextButton_6.Script 
+coroutine.wrap(WWXAJ_fake_script)()
+local function QUWE_fake_script() -- TextButton_6.Script 
 	local script = Instance.new('Script', TextButton_6)
 
 	local textbutton = script.Parent
@@ -296,8 +324,8 @@ local function EBXK_fake_script() -- TextButton_6.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/1price/usercreation/refs/heads/main/UserCreation.lua", true))()
 	end)
 end
-coroutine.wrap(EBXK_fake_script)()
-local function XCXAVB_fake_script() -- ImageLabel.Script 
+coroutine.wrap(QUWE_fake_script)()
+local function IJAKTZB_fake_script() -- ImageLabel.Script 
 	local script = Instance.new('Script', ImageLabel)
 
 	local img = script.Parent
@@ -319,8 +347,8 @@ local function XCXAVB_fake_script() -- ImageLabel.Script
 		task.wait(0.1)
 	end
 end
-coroutine.wrap(XCXAVB_fake_script)()
-local function OBBSF_fake_script() -- ImageLabel_2.Script 
+coroutine.wrap(IJAKTZB_fake_script)()
+local function XTULFL_fake_script() -- ImageLabel_2.Script 
 	local script = Instance.new('Script', ImageLabel_2)
 
 	local img = script.Parent
@@ -342,8 +370,8 @@ local function OBBSF_fake_script() -- ImageLabel_2.Script
 		task.wait(0.15)
 	end
 end
-coroutine.wrap(OBBSF_fake_script)()
-local function XAWVPVY_fake_script() -- Frame.Smooth GUI Dragging 
+coroutine.wrap(XTULFL_fake_script)()
+local function VUWRGZW_fake_script() -- Frame.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -400,4 +428,4 @@ local function XAWVPVY_fake_script() -- Frame.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(XAWVPVY_fake_script)()
+coroutine.wrap(VUWRGZW_fake_script)()
