@@ -1,4 +1,5 @@
---Gui Rework!!! V.1.5 
+-- Bug Fixes 
+-- Current Version: V.1.5
 
 local drimeguiv15 = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
@@ -9,9 +10,9 @@ local HomeFrame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 local TextLabel_3 = Instance.new("TextLabel")
-local TextLabel_4 = Instance.new("TextLabel")
 local ImageLabel = Instance.new("ImageLabel")
 local ImageLabel_2 = Instance.new("ImageLabel")
+local TextLabel_4 = Instance.new("TextLabel")
 local ButtonsFrame = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
 local TextButton_2 = Instance.new("TextButton")
@@ -30,6 +31,7 @@ local TextButton_8 = Instance.new("TextButton")
 drimeguiv15.Name = "drimeguiv1.5"
 drimeguiv15.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 drimeguiv15.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+drimeguiv15.ResetOnSpawn = false
 
 Frame.Parent = drimeguiv15
 Frame.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
@@ -44,7 +46,7 @@ Title.BackgroundTransparency = 1.000
 Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Title.BorderSizePixel = 0
 Title.Size = UDim2.new(0, 90, 0, 30)
-Title.Font = Enum.Font.Unknown
+Title.Font = Enum.Font.SourceSansLight
 Title.Text = "Drime Gui V.1.5"
 Title.TextColor3 = Color3.fromRGB(0, 85, 0)
 Title.TextScaled = true
@@ -88,10 +90,10 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.335714281, 0, 0.0128203174, 0)
-TextLabel.Size = UDim2.new(0, 92, 0, 27)
-TextLabel.Font = Enum.Font.Unknown
-TextLabel.Text = "Home Tab"
+TextLabel.Position = UDim2.new(0, 0, 0.346153647, 0)
+TextLabel.Size = UDim2.new(0, 280, 0, 27)
+TextLabel.Font = Enum.Font.SciFi
+TextLabel.Text = "Gui Made By: drime.roblox (discord)"
 TextLabel.TextColor3 = Color3.fromRGB(0, 85, 0)
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
@@ -101,10 +103,10 @@ TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0, 0, 0.346153647, 0)
+TextLabel_2.Position = UDim2.new(0, 0, 0.583333135, 0)
 TextLabel_2.Size = UDim2.new(0, 280, 0, 27)
-TextLabel_2.Font = Enum.Font.Unknown
-TextLabel_2.Text = "Gui Made By: drime.roblox (discord)"
+TextLabel_2.Font = Enum.Font.SourceSansLight
+TextLabel_2.Text = "dunno what else to put, bleh :3"
 TextLabel_2.TextColor3 = Color3.fromRGB(0, 85, 0)
 TextLabel_2.TextSize = 14.000
 TextLabel_2.TextWrapped = true
@@ -114,26 +116,13 @@ TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.BackgroundTransparency = 1.000
 TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0, 0, 0.583333135, 0)
+TextLabel_3.Position = UDim2.new(0, 0, 0.820512652, 0)
 TextLabel_3.Size = UDim2.new(0, 280, 0, 27)
 TextLabel_3.Font = Enum.Font.Unknown
-TextLabel_3.Text = "dunno what else to put, bleh :3"
+TextLabel_3.Text = "This Gui Is In WIP Expect More"
 TextLabel_3.TextColor3 = Color3.fromRGB(0, 85, 0)
 TextLabel_3.TextSize = 14.000
 TextLabel_3.TextWrapped = true
-
-TextLabel_4.Parent = HomeFrame
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0, 0, 0.820512652, 0)
-TextLabel_4.Size = UDim2.new(0, 280, 0, 27)
-TextLabel_4.Font = Enum.Font.Unknown
-TextLabel_4.Text = "This Gui Is In WIP Expect More"
-TextLabel_4.TextColor3 = Color3.fromRGB(0, 85, 0)
-TextLabel_4.TextSize = 14.000
-TextLabel_4.TextWrapped = true
 
 ImageLabel.Parent = HomeFrame
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -154,6 +143,19 @@ ImageLabel_2.Position = UDim2.new(0.454872578, 0, 0.177634805, 0)
 ImageLabel_2.Size = UDim2.new(0, 25, 0, 25)
 ImageLabel_2.Image = "rbxassetid://15780353486"
 ImageLabel_2.ImageColor3 = Color3.fromRGB(255, 0, 0)
+
+TextLabel_4.Parent = HomeFrame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.335714281, 0, 0.0128203174, 0)
+TextLabel_4.Size = UDim2.new(0, 92, 0, 27)
+TextLabel_4.Font = Enum.Font.SciFi
+TextLabel_4.Text = "Home Tab"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 85, 0)
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
 
 ButtonsFrame.Name = "Button's Frame"
 ButtonsFrame.Parent = BG
@@ -198,7 +200,7 @@ TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_5.BorderSizePixel = 0
 TextLabel_5.Position = UDim2.new(0.335714281, 0, 0.0128203174, 0)
 TextLabel_5.Size = UDim2.new(0, 92, 0, 27)
-TextLabel_5.Font = Enum.Font.Unknown
+TextLabel_5.Font = Enum.Font.SciFi
 TextLabel_5.Text = "Tab 1"
 TextLabel_5.TextColor3 = Color3.fromRGB(0, 85, 0)
 TextLabel_5.TextSize = 14.000
@@ -278,7 +280,7 @@ TextButton_8.TextWrapped = true
 
 -- Scripts:
 
-local function LRNA_fake_script() -- Frame.Smooth GUI Dragging 
+local function IPFTAX_fake_script() -- Frame.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -335,8 +337,8 @@ local function LRNA_fake_script() -- Frame.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(LRNA_fake_script)()
-local function ZBDZXP_fake_script() -- Frame.keygui 
+coroutine.wrap(IPFTAX_fake_script)()
+local function AVEOOS_fake_script() -- Frame.keygui 
 	local script = Instance.new('LocalScript', Frame)
 
 	local userInputService = game:GetService("UserInputService")
@@ -358,8 +360,8 @@ local function ZBDZXP_fake_script() -- Frame.keygui
 	end)
 	
 end
-coroutine.wrap(ZBDZXP_fake_script)()
-local function FODPJT_fake_script() -- ImageLabel.Script 
+coroutine.wrap(AVEOOS_fake_script)()
+local function DDADX_fake_script() -- ImageLabel.Script 
 	local script = Instance.new('Script', ImageLabel)
 
 	local img = script.Parent
@@ -381,8 +383,8 @@ local function FODPJT_fake_script() -- ImageLabel.Script
 		task.wait(0.1)
 	end
 end
-coroutine.wrap(FODPJT_fake_script)()
-local function YULIFN_fake_script() -- ImageLabel_2.Script 
+coroutine.wrap(DDADX_fake_script)()
+local function AKWRWJI_fake_script() -- ImageLabel_2.Script 
 	local script = Instance.new('Script', ImageLabel_2)
 
 	local img = script.Parent
@@ -404,8 +406,8 @@ local function YULIFN_fake_script() -- ImageLabel_2.Script
 		task.wait(0.15)
 	end
 end
-coroutine.wrap(YULIFN_fake_script)()
-local function NLOKHOX_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(AKWRWJI_fake_script)()
+local function WTTL_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -413,8 +415,8 @@ local function NLOKHOX_fake_script() -- TextButton.LocalScript
 		script.Parent.Parent.Parent.Frame1.Visible = false
 	end)
 end
-coroutine.wrap(NLOKHOX_fake_script)()
-local function MKKYNNB_fake_script() -- TextButton_2.LocalScript 
+coroutine.wrap(WTTL_fake_script)()
+local function RCVCE_fake_script() -- TextButton_2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -422,8 +424,8 @@ local function MKKYNNB_fake_script() -- TextButton_2.LocalScript
 		script.Parent.Parent.Parent.Frame1.Visible = true
 	end)
 end
-coroutine.wrap(MKKYNNB_fake_script)()
-local function AYLR_fake_script() -- TextButton_3.Script 
+coroutine.wrap(RCVCE_fake_script)()
+local function YIOX_fake_script() -- TextButton_3.Script 
 	local script = Instance.new('Script', TextButton_3)
 
 	local textbutton = script.Parent
@@ -432,8 +434,8 @@ local function AYLR_fake_script() -- TextButton_3.Script
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 end
-coroutine.wrap(AYLR_fake_script)()
-local function RWQT_fake_script() -- TextButton_4.Script 
+coroutine.wrap(YIOX_fake_script)()
+local function CEKTFY_fake_script() -- TextButton_4.Script 
 	local script = Instance.new('Script', TextButton_4)
 
 	local textbutton = script.Parent
@@ -442,8 +444,8 @@ local function RWQT_fake_script() -- TextButton_4.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/main/UNCCheckEnv.lua"))()
 	end)
 end
-coroutine.wrap(RWQT_fake_script)()
-local function DDXAA_fake_script() -- TextButton_5.LocalScript 
+coroutine.wrap(CEKTFY_fake_script)()
+local function OXCUX_fake_script() -- TextButton_5.LocalScript 
 	local script = Instance.new('LocalScript', TextButton_5)
 
 	local textButton = script.Parent
@@ -477,8 +479,8 @@ local function DDXAA_fake_script() -- TextButton_5.LocalScript
 	end)
 	
 end
-coroutine.wrap(DDXAA_fake_script)()
-local function HAEUK_fake_script() -- TextButton_6.Script 
+coroutine.wrap(OXCUX_fake_script)()
+local function BBZXBY_fake_script() -- TextButton_6.Script 
 	local script = Instance.new('Script', TextButton_6)
 
 	local textbutton = script.Parent
@@ -487,8 +489,8 @@ local function HAEUK_fake_script() -- TextButton_6.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/RealZzHub/Main/main/Main.lua"))()
 	end)
 end
-coroutine.wrap(HAEUK_fake_script)()
-local function NUBD_fake_script() -- TextButton_7.Script 
+coroutine.wrap(BBZXBY_fake_script)()
+local function BXWUZK_fake_script() -- TextButton_7.Script 
 	local script = Instance.new('Script', TextButton_7)
 
 	local textbutton = script.Parent
@@ -497,8 +499,8 @@ local function NUBD_fake_script() -- TextButton_7.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/refs/heads/main/script"))()
 	end)
 end
-coroutine.wrap(NUBD_fake_script)()
-local function DLJO_fake_script() -- TextButton_8.Script 
+coroutine.wrap(BXWUZK_fake_script)()
+local function ZUJOSAV_fake_script() -- TextButton_8.Script 
 	local script = Instance.new('Script', TextButton_8)
 
 	local textbutton = script.Parent
@@ -507,4 +509,4 @@ local function DLJO_fake_script() -- TextButton_8.Script
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/1price/usercreation/refs/heads/main/UserCreation.lua", true))()
 	end)
 end
-coroutine.wrap(DLJO_fake_script)()
+coroutine.wrap(ZUJOSAV_fake_script)()
