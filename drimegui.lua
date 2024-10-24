@@ -1,377 +1,284 @@
--- Removed Mikes Cheat :(
+--Gui Rework!!! V.1.5 
 
-local DrimeGui = Instance.new("ScreenGui")
+local drimeguiv15 = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
-local GuiNameHeader = Instance.new("TextLabel")
-local Frame_2 = Instance.new("Frame")
-local Frame_3 = Instance.new("Frame")
-local ScrollingFrame = Instance.new("ScrollingFrame")
+local Title = Instance.new("TextLabel")
+local CloseOrOpenReminder = Instance.new("TextLabel")
+local BG = Instance.new("Frame")
+local HomeFrame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local ButtonsFrame = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
 local TextButton_2 = Instance.new("TextButton")
+local Frame1 = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local ButtonsTab = Instance.new("Frame")
 local TextButton_3 = Instance.new("TextButton")
 local TextButton_4 = Instance.new("TextButton")
 local TextButton_5 = Instance.new("TextButton")
 local TextButton_6 = Instance.new("TextButton")
-local TextLabel_2 = Instance.new("TextLabel")
-local ImageLabel = Instance.new("ImageLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local ImageLabel_2 = Instance.new("ImageLabel")
+local TextButton_7 = Instance.new("TextButton")
+local TextButton_8 = Instance.new("TextButton")
 
 --Properties:
 
-DrimeGui.Name = "DrimeGui"
-DrimeGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-DrimeGui.ResetOnSpawn = false
+drimeguiv15.Name = "drimeguiv1.5"
+drimeguiv15.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+drimeguiv15.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = DrimeGui
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.197406113, 0, 0.225206479, 0)
-Frame.Size = UDim2.new(0, 491, 0, 20)
-Frame.ZIndex = 2
+Frame.Parent = drimeguiv15
+Frame.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+Frame.BorderColor3 = Color3.fromRGB(140, 140, 140)
+Frame.Position = UDim2.new(0.0973236188, 0, 0.211801648, 0)
+Frame.Size = UDim2.new(0, 375, 0, 30)
 
-GuiNameHeader.Name = "GuiNameHeader"
-GuiNameHeader.Parent = Frame
-GuiNameHeader.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-GuiNameHeader.BackgroundTransparency = 1.000
-GuiNameHeader.BorderColor3 = Color3.fromRGB(0, 0, 0)
-GuiNameHeader.BorderSizePixel = 0
-GuiNameHeader.Position = UDim2.new(0.30222711, 0, 0, 0)
-GuiNameHeader.Size = UDim2.new(0, 200, 0, 20)
-GuiNameHeader.ZIndex = 3
-GuiNameHeader.Font = Enum.Font.Unknown
-GuiNameHeader.Text = "Drime's Gui By drime.roblox "
-GuiNameHeader.TextColor3 = Color3.fromRGB(255, 255, 255)
-GuiNameHeader.TextScaled = true
-GuiNameHeader.TextSize = 14.000
-GuiNameHeader.TextWrapped = true
-GuiNameHeader.Font = Enum.Font.Michroma
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 90, 0, 30)
+Title.Font = Enum.Font.Barlow
+Title.Text = "Drime Gui V.1.5"
+Title.TextColor3 = Color3.fromRGB(0, 85, 0)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
 
-Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_2.BorderSizePixel = 0
-Frame_2.Position = UDim2.new(-0.000149915271, 0, 0.543801486, 0)
-Frame_2.Size = UDim2.new(0, 491, 0, 11)
-Frame_2.ZIndex = 2
+CloseOrOpenReminder.Name = "CloseOrOpenReminder"
+CloseOrOpenReminder.Parent = Frame
+CloseOrOpenReminder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseOrOpenReminder.BackgroundTransparency = 1.000
+CloseOrOpenReminder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CloseOrOpenReminder.BorderSizePixel = 0
+CloseOrOpenReminder.Position = UDim2.new(0.565995693, 0, 0, 0)
+CloseOrOpenReminder.Size = UDim2.new(0, 160, 0, 30)
+CloseOrOpenReminder.Font = Enum.Font.Barlow
+CloseOrOpenReminder.Text = "button Q to open/close gui"
+CloseOrOpenReminder.TextColor3 = Color3.fromRGB(0, 85, 0)
+CloseOrOpenReminder.TextScaled = true
+CloseOrOpenReminder.TextSize = 14.000
+CloseOrOpenReminder.TextWrapped = true
+CloseOrOpenReminder.TextXAlignment = Enum.TextXAlignment.Right
 
-Frame_3.Parent = Frame
-Frame_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame_3.BackgroundTransparency = 0.750
-Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_3.BorderSizePixel = 0
-Frame_3.Position = UDim2.new(-0.000149915271, 0, 0.493801892, 0)
-Frame_3.Size = UDim2.new(0, 491, 0, 263)
+BG.Name = "BG"
+BG.Parent = Frame
+BG.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+BG.BackgroundTransparency = 0.250
+BG.BorderColor3 = Color3.fromRGB(38, 38, 38)
+BG.Position = UDim2.new(0, 0, 1.0333333, 0)
+BG.Size = UDim2.new(0, 375, 0, 175)
 
-ScrollingFrame.Parent = Frame_3
-ScrollingFrame.Active = true
-ScrollingFrame.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
-ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ScrollingFrame.BorderSizePixel = 0
-ScrollingFrame.Position = UDim2.new(0.000149915271, 0, 0.0424221009, 0)
-ScrollingFrame.Size = UDim2.new(0, 103, 0, 251)
-ScrollingFrame.ZIndex = 0
-ScrollingFrame.BottomImage = "rbxassetid://3062505976"
-ScrollingFrame.CanvasSize = UDim2.new(0, 0, 5, 0)
-ScrollingFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
-ScrollingFrame.MidImage = "rbxassetid://3062506202"
-ScrollingFrame.TopImage = "rbxassetid://3062506445"
+HomeFrame.Name = "HomeFrame"
+HomeFrame.Parent = BG
+HomeFrame.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+HomeFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HomeFrame.Position = UDim2.new(0.219184577, 0, 0.0500999242, 0)
+HomeFrame.Size = UDim2.new(0, 280, 0, 156)
 
-TextLabel.Parent = ScrollingFrame
+TextLabel.Parent = HomeFrame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0, 0, 0.00512123853, 0)
-TextLabel.Size = UDim2.new(0, 92, 0, 16)
-TextLabel.Font = Enum.Font.Unknown
-TextLabel.Text = "Click A Button To Execute Script"
-TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextLabel.TextScaled = true
+TextLabel.Position = UDim2.new(0.335714281, 0, 0.0128203174, 0)
+TextLabel.Size = UDim2.new(0, 92, 0, 27)
+TextLabel.Font = Enum.Font.Instonsolata
+TextLabel.Text = "Home Tab"
+TextLabel.TextColor3 = Color3.fromRGB(0, 85, 0)
 TextLabel.TextSize = 14.000
 TextLabel.TextWrapped = true
 
-TextButton.Parent = ScrollingFrame
-TextButton.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0, 0, 0.0199999996, 0)
-TextButton.Size = UDim2.new(0, 92, 0, 17)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Inf Yeild"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
-
-TextButton_2.Parent = ScrollingFrame
-TextButton_2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
-TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(0, 0, 0.0350000001, 0)
-TextButton_2.Size = UDim2.new(0, 92, 0, 17)
-TextButton_2.Font = Enum.Font.SourceSans
-TextButton_2.Text = "UNC Check Your Executor"
-TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.TextScaled = true
-TextButton_2.TextSize = 14.000
-TextButton_2.TextWrapped = true
-
-TextButton_3.Parent = ScrollingFrame
-TextButton_3.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
-TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_3.BorderSizePixel = 0
-TextButton_3.Position = UDim2.new(0, 0, 0.0500000007, 0)
-TextButton_3.Size = UDim2.new(0, 92, 0, 17)
-TextButton_3.Font = Enum.Font.SourceSans
-TextButton_3.Text = "Go Flying (fling self)"
-TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_3.TextScaled = true
-TextButton_3.TextSize = 14.000
-TextButton_3.TextWrapped = true
-
-TextButton_4.Parent = ScrollingFrame
-TextButton_4.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
-TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_4.BorderSizePixel = 0
-TextButton_4.Position = UDim2.new(0, 0, 0.0649999976, 0)
-TextButton_4.Size = UDim2.new(0, 92, 0, 17)
-TextButton_4.Font = Enum.Font.SourceSans
-TextButton_4.Text = "RealZz Hub :D"
-TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_4.TextScaled = true
-TextButton_4.TextSize = 14.000
-TextButton_4.TextWrapped = true
-
-TextButton_5.Parent = ScrollingFrame
-TextButton_5.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
-TextButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_5.BorderSizePixel = 0
-TextButton_5.Position = UDim2.new(0, 0, 0.0799999982, 0)
-TextButton_5.Size = UDim2.new(0, 92, 0, 17)
-TextButton_5.Font = Enum.Font.SourceSans
-TextButton_5.Text = "Ragdoll Engine"
-TextButton_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_5.TextScaled = true
-TextButton_5.TextSize = 14.000
-TextButton_5.TextWrapped = true
-
-TextButton_6.Parent = ScrollingFrame
-TextButton_6.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
-TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_6.BorderSizePixel = 0
-TextButton_6.Position = UDim2.new(0, 0, 0.0949999988, 0)
-TextButton_6.Size = UDim2.new(0, 92, 0, 17)
-TextButton_6.Font = Enum.Font.SourceSans
-TextButton_6.Text = "Chat Bypass"
-TextButton_6.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_6.TextScaled = true
-TextButton_6.TextSize = 14.000
-TextButton_6.TextWrapped = true
-
-TextLabel_2.Parent = Frame_3
+TextLabel_2.Parent = HomeFrame
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_2.BorderSizePixel = 0
-TextLabel_2.Position = UDim2.new(0.213414639, 0, 0.0424221605, 0)
-TextLabel_2.Size = UDim2.new(0, 387, 0, 250)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "idfk what to put here lmao XDD"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.Position = UDim2.new(0, 0, 0.346153647, 0)
+TextLabel_2.Size = UDim2.new(0, 280, 0, 27)
+TextLabel_2.Font = Enum.Font.Instonsolata
+TextLabel_2.Text = "Gui Made By: drime.roblox (discord)"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 85, 0)
 TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
 
-ImageLabel.Parent = Frame_3
-ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel.BackgroundTransparency = 1.000
-ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(0.212015495, 0, 0.0494296588, 0)
-ImageLabel.Size = UDim2.new(0, 50, 0, 50)
-ImageLabel.Image = "rbxassetid://15780353486"
-ImageLabel.ImageColor3 = Color3.fromRGB(255, 0, 0)
-
-TextLabel_3.Parent = Frame_3
+TextLabel_3.Parent = HomeFrame
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.BackgroundTransparency = 1.000
 TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.213414639, 0, 0.947365105, 0)
-TextLabel_3.Size = UDim2.new(0, 338, 0, 12)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "Press Tilde Key (~) to open/close this gui"
-TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.TextScaled = true
+TextLabel_3.Position = UDim2.new(0, 0, 0.583333135, 0)
+TextLabel_3.Size = UDim2.new(0, 280, 0, 27)
+TextLabel_3.Font = Enum.Font.Instonsolata
+TextLabel_3.Text = "dunno what else to put, bleh :3"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 85, 0)
 TextLabel_3.TextSize = 14.000
 TextLabel_3.TextWrapped = true
 
-ImageLabel_2.Parent = Frame_3
+TextLabel_4.Parent = HomeFrame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0, 0, 0.820512652, 0)
+TextLabel_4.Size = UDim2.new(0, 280, 0, 27)
+TextLabel_4.Font = Enum.Font.Instonsolata
+TextLabel_4.Text = "This Gui Is In WIP Expect More"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 85, 0)
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+ImageLabel.Parent = HomeFrame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.454872578, 0, 0.177634805, 0)
+ImageLabel.Size = UDim2.new(0, 25, 0, 25)
+ImageLabel.Image = "rbxassetid://15780353486"
+ImageLabel.ImageColor3 = Color3.fromRGB(255, 0, 0)
+
+ImageLabel_2.Parent = HomeFrame
 ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel_2.BackgroundTransparency = 1.000
 ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel_2.BorderSizePixel = 0
-ImageLabel_2.Position = UDim2.new(0.212015495, 0, 0.0494296588, 0)
-ImageLabel_2.Size = UDim2.new(0, 50, 0, 50)
+ImageLabel_2.Position = UDim2.new(0.454872578, 0, 0.177634805, 0)
+ImageLabel_2.Size = UDim2.new(0, 25, 0, 25)
 ImageLabel_2.Image = "rbxassetid://15780353486"
 ImageLabel_2.ImageColor3 = Color3.fromRGB(255, 0, 0)
 
+ButtonsFrame.Name = "Button's Frame"
+ButtonsFrame.Parent = BG
+ButtonsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonsFrame.BackgroundTransparency = 1.000
+ButtonsFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ButtonsFrame.BorderSizePixel = 0
+ButtonsFrame.Size = UDim2.new(0, 82, 0, 175)
+
+TextButton.Parent = ButtonsFrame
+TextButton.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.Position = UDim2.new(0.134146348, 0, 0.0399999991, 0)
+TextButton.Size = UDim2.new(0, 55, 0, 28)
+TextButton.Font = Enum.Font.Unknown
+TextButton.Text = "Home"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+TextButton_2.Parent = ButtonsFrame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(81, 81, 81)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.Position = UDim2.new(0.134146348, 0, 0.21714285, 0)
+TextButton_2.Size = UDim2.new(0, 55, 0, 28)
+TextButton_2.Font = Enum.Font.Unknown
+TextButton_2.Text = "Tab 1"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextSize = 14.000
+
+Frame1.Name = "Frame1"
+Frame1.Parent = BG
+Frame1.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+Frame1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame1.Position = UDim2.new(0.219184577, 0, 0.0500999242, 0)
+Frame1.Size = UDim2.new(0, 280, 0, 156)
+Frame1.Visible = false
+
+TextLabel_5.Parent = Frame1
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.335714281, 0, 0.0128203174, 0)
+TextLabel_5.Size = UDim2.new(0, 92, 0, 27)
+TextLabel_5.Font = Enum.Font.Unknown
+TextLabel_5.Text = "Tab 1"
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 85, 0)
+TextLabel_5.TextSize = 14.000
+TextLabel_5.TextWrapped = true
+
+ButtonsTab.Name = "Buttons Tab"
+ButtonsTab.Parent = Frame1
+ButtonsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonsTab.BackgroundTransparency = 0.900
+ButtonsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ButtonsTab.BorderSizePixel = 0
+ButtonsTab.Position = UDim2.new(0.0250000004, 0, 0.192307696, 0)
+ButtonsTab.Size = UDim2.new(0, 266, 0, 119)
+
+TextButton_3.Parent = ButtonsTab
+TextButton_3.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+TextButton_3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.Size = UDim2.new(0, 85, 0, 27)
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "Inf Yeild"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextSize = 14.000
+
+TextButton_4.Parent = ButtonsTab
+TextButton_4.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+TextButton_4.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.Position = UDim2.new(0.327067673, 0, 0, 0)
+TextButton_4.Size = UDim2.new(0, 92, 0, 27)
+TextButton_4.Font = Enum.Font.SourceSans
+TextButton_4.Text = "UNC Check"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextSize = 14.000
+
+TextButton_5.Parent = ButtonsTab
+TextButton_5.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+TextButton_5.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.Position = UDim2.new(0.672932327, 0, 0, 0)
+TextButton_5.Size = UDim2.new(0, 87, 0, 27)
+TextButton_5.Font = Enum.Font.SourceSans
+TextButton_5.Text = "Yeet Urself (Fling Self)"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 14.000
+TextButton_5.TextWrapped = true
+
+TextButton_6.Parent = ButtonsTab
+TextButton_6.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+TextButton_6.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.Position = UDim2.new(0, 0, 0.226890758, 0)
+TextButton_6.Size = UDim2.new(0, 85, 0, 27)
+TextButton_6.Font = Enum.Font.SourceSans
+TextButton_6.Text = "RealZz Hub"
+TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_6.TextSize = 14.000
+
+TextButton_7.Parent = ButtonsTab
+TextButton_7.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+TextButton_7.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_7.Position = UDim2.new(0.327067673, 0, 0.228844658, 0)
+TextButton_7.Size = UDim2.new(0, 92, 0, 27)
+TextButton_7.Font = Enum.Font.SourceSans
+TextButton_7.Text = "Ragdoll Engine"
+TextButton_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_7.TextSize = 14.000
+
+TextButton_8.Parent = ButtonsTab
+TextButton_8.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+TextButton_8.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_8.Position = UDim2.new(0.672932327, 0, 0.226890758, 0)
+TextButton_8.Size = UDim2.new(0, 87, 0, 27)
+TextButton_8.Font = Enum.Font.SourceSans
+TextButton_8.Text = "The Chat Bypass"
+TextButton_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_8.TextScaled = true
+TextButton_8.TextSize = 14.000
+TextButton_8.TextWrapped = true
+
 -- Scripts:
 
-local function LTYPSHW_fake_script() -- Frame.keygui 
-	local script = Instance.new('LocalScript', Frame)
-
-	local userInputService = game:GetService("UserInputService")
-	
-	local ui_Item = script.Parent
-	
-	local input_Key = Enum.KeyCode.Tilde
-	
-	userInputService.InputBegan:Connect(function(input)
-		if input.KeyCode == input_Key then
-			if ui_Item.Visible == false then
-				ui_Item.Visible = true
-			else
-				ui_Item.Visible = false
-			end
-		end
-		
-		return
-	end)
-	
-end
-coroutine.wrap(LTYPSHW_fake_script)()
-local function MRIBSLJ_fake_script() -- TextButton.Script 
-	local script = Instance.new('Script', TextButton)
-
-	local textbutton = script.Parent
-	
-	textbutton.MouseButton1Down:Connect(function()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-	end)
-end
-coroutine.wrap(MRIBSLJ_fake_script)()
-local function CQQU_fake_script() -- TextButton_2.Script 
-	local script = Instance.new('Script', TextButton_2)
-
-	local textbutton = script.Parent
-	
-	textbutton.MouseButton1Down:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/main/UNCCheckEnv.lua"))()
-	end)
-end
-coroutine.wrap(CQQU_fake_script)()
-local function HZRZXE_fake_script() -- TextButton_3.LocalScript 
-	local script = Instance.new('LocalScript', TextButton_3)
-
-	local textButton = script.Parent
-	textButton.MouseButton1Down:Connect(function()
-		local player = game.Players.LocalPlayer
-		local character = player.Character or player.CharacterAdded:Wait()
-		local humanoid = character:WaitForChild("Humanoid")
-	
-		-- Make the player sit
-		humanoid.Sit = true
-	
-		-- Add a strong and instant BodyVelocity to fling the player
-		local bodyVelocity = Instance.new("BodyVelocity")
-		bodyVelocity.Velocity = Vector3.new(math.random(-1000,1000), 1000, math.random(-1000,1000)) -- Extreme velocity for instant fling
-		bodyVelocity.P = 3000 -- High power to ensure instant movement
-		bodyVelocity.Parent = character.PrimaryPart
-	
-		-- Add a BodyAngularVelocity to spin the player really fast
-		local bodyAngularVelocity = Instance.new("BodyAngularVelocity")
-		bodyAngularVelocity.AngularVelocity = Vector3.new(math.random(-50,50), math.random(-50,50), math.random(-50,50)) -- Increased angular velocity for faster spin
-		bodyAngularVelocity.MaxTorque = Vector3.new(100000, 100000, 100000) -- High torque to ensure strong spin
-		bodyAngularVelocity.Parent = character.PrimaryPart
-	
-		-- Unsit after 2 seconds
-		wait(2)
-		humanoid.Sit = false
-	
-		-- Clean up
-		bodyVelocity:Destroy()
-		bodyAngularVelocity:Destroy()
-	end)
-	
-end
-coroutine.wrap(HZRZXE_fake_script)()
-local function EMFL_fake_script() -- TextButton_4.Script 
-	local script = Instance.new('Script', TextButton_4)
-
-	local textbutton = script.Parent
-	
-	textbutton.MouseButton1Down:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/RealZzHub/Main/main/Main.lua"))()
-	end)
-end
-coroutine.wrap(EMFL_fake_script)()
-local function WWXAJ_fake_script() -- TextButton_5.Script 
-	local script = Instance.new('Script', TextButton_5)
-
-	local textbutton = script.Parent
-	
-	textbutton.MouseButton1Down:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/refs/heads/main/script"))()
-	end)
-end
-coroutine.wrap(WWXAJ_fake_script)()
-local function QUWE_fake_script() -- TextButton_6.Script 
-	local script = Instance.new('Script', TextButton_6)
-
-	local textbutton = script.Parent
-	
-	textbutton.MouseButton1Down:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/1price/usercreation/refs/heads/main/UserCreation.lua", true))()
-	end)
-end
-coroutine.wrap(QUWE_fake_script)()
-local function IJAKTZB_fake_script() -- ImageLabel.Script 
-	local script = Instance.new('Script', ImageLabel)
-
-	local img = script.Parent
-	
-	while true do
-		img.Image = "rbxassetid://16526208947"
-		task.wait(0.1)
-		img.Image = "rbxassetid://13340029538"
-		task.wait(0.1)
-		img.Image = "rbxassetid://17580861125"
-		task.wait(0.1)
-		img.Image = "rbxassetid://13721725690"
-		task.wait(0.1)
-		img.Image = "rbxassetid://15625374379"
-		task.wait(0.1)
-		img.Image = "rbxassetid://17432116100"
-		task.wait(0.1)
-		img.Image = "rbxassetid://14896617978"
-		task.wait(0.1)
-	end
-end
-coroutine.wrap(IJAKTZB_fake_script)()
-local function XTULFL_fake_script() -- ImageLabel_2.Script 
-	local script = Instance.new('Script', ImageLabel_2)
-
-	local img = script.Parent
-	
-	while true do
-		img.Image = "rbxassetid://16526208947"
-		task.wait(0.15)
-		img.Image = "rbxassetid://13340029538"
-		task.wait(0.15)
-		img.Image = "rbxassetid://17580861125"
-		task.wait(0.15)
-		img.Image = "rbxassetid://13721725690"
-		task.wait(0.15)
-		img.Image = "rbxassetid://15625374379"
-		task.wait(0.15)
-		img.Image = "rbxassetid://17432116100"
-		task.wait(0.15)
-		img.Image = "rbxassetid://14896617978"
-		task.wait(0.15)
-	end
-end
-coroutine.wrap(XTULFL_fake_script)()
-local function VUWRGZW_fake_script() -- Frame.Smooth GUI Dragging 
+local function LRNA_fake_script() -- Frame.Smooth GUI Dragging 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -428,4 +335,176 @@ local function VUWRGZW_fake_script() -- Frame.Smooth GUI Dragging
 	
 	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(VUWRGZW_fake_script)()
+coroutine.wrap(LRNA_fake_script)()
+local function ZBDZXP_fake_script() -- Frame.keygui 
+	local script = Instance.new('LocalScript', Frame)
+
+	local userInputService = game:GetService("UserInputService")
+	
+	local ui_Item = script.Parent
+	
+	local input_Key = Enum.KeyCode.KeypadDivide
+	
+	userInputService.InputBegan:Connect(function(input)
+		if input.KeyCode == input_Key then
+			if ui_Item.Visible == false then
+				ui_Item.Visible = true
+			else
+				ui_Item.Visible = false
+			end
+		end
+		
+		return
+	end)
+	
+end
+coroutine.wrap(ZBDZXP_fake_script)()
+local function FODPJT_fake_script() -- ImageLabel.Script 
+	local script = Instance.new('Script', ImageLabel)
+
+	local img = script.Parent
+	
+	while true do
+		img.Image = "rbxassetid://16526208947"
+		task.wait(0.1)
+		img.Image = "rbxassetid://13340029538"
+		task.wait(0.1)
+		img.Image = "rbxassetid://17580861125"
+		task.wait(0.1)
+		img.Image = "rbxassetid://13721725690"
+		task.wait(0.1)
+		img.Image = "rbxassetid://15625374379"
+		task.wait(0.1)
+		img.Image = "rbxassetid://17432116100"
+		task.wait(0.1)
+		img.Image = "rbxassetid://14896617978"
+		task.wait(0.1)
+	end
+end
+coroutine.wrap(FODPJT_fake_script)()
+local function YULIFN_fake_script() -- ImageLabel_2.Script 
+	local script = Instance.new('Script', ImageLabel_2)
+
+	local img = script.Parent
+	
+	while true do
+		img.Image = "rbxassetid://16526208947"
+		task.wait(0.15)
+		img.Image = "rbxassetid://13340029538"
+		task.wait(0.15)
+		img.Image = "rbxassetid://17580861125"
+		task.wait(0.15)
+		img.Image = "rbxassetid://13721725690"
+		task.wait(0.15)
+		img.Image = "rbxassetid://15625374379"
+		task.wait(0.15)
+		img.Image = "rbxassetid://17432116100"
+		task.wait(0.15)
+		img.Image = "rbxassetid://14896617978"
+		task.wait(0.15)
+	end
+end
+coroutine.wrap(YULIFN_fake_script)()
+local function NLOKHOX_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.HomeFrame.Visible = true
+		script.Parent.Parent.Parent.Frame1.Visible = false
+	end)
+end
+coroutine.wrap(NLOKHOX_fake_script)()
+local function MKKYNNB_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.HomeFrame.Visible = false
+		script.Parent.Parent.Parent.Frame1.Visible = true
+	end)
+end
+coroutine.wrap(MKKYNNB_fake_script)()
+local function AYLR_fake_script() -- TextButton_3.Script 
+	local script = Instance.new('Script', TextButton_3)
+
+	local textbutton = script.Parent
+	
+	textbutton.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end)
+end
+coroutine.wrap(AYLR_fake_script)()
+local function RWQT_fake_script() -- TextButton_4.Script 
+	local script = Instance.new('Script', TextButton_4)
+
+	local textbutton = script.Parent
+	
+	textbutton.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/main/UNCCheckEnv.lua"))()
+	end)
+end
+coroutine.wrap(RWQT_fake_script)()
+local function DDXAA_fake_script() -- TextButton_5.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_5)
+
+	local textButton = script.Parent
+	textButton.MouseButton1Down:Connect(function()
+		local player = game.Players.LocalPlayer
+		local character = player.Character or player.CharacterAdded:Wait()
+		local humanoid = character:WaitForChild("Humanoid")
+	
+		-- Make the player sit
+		humanoid.Sit = true
+	
+		-- Add a strong and instant BodyVelocity to fling the player
+		local bodyVelocity = Instance.new("BodyVelocity")
+		bodyVelocity.Velocity = Vector3.new(math.random(-1000,1000), 1000, math.random(-1000,1000)) -- Extreme velocity for instant fling
+		bodyVelocity.P = 3000 -- High power to ensure instant movement
+		bodyVelocity.Parent = character.PrimaryPart
+	
+		-- Add a BodyAngularVelocity to spin the player really fast
+		local bodyAngularVelocity = Instance.new("BodyAngularVelocity")
+		bodyAngularVelocity.AngularVelocity = Vector3.new(math.random(-50,50), math.random(-50,50), math.random(-50,50)) -- Increased angular velocity for faster spin
+		bodyAngularVelocity.MaxTorque = Vector3.new(100000, 100000, 100000) -- High torque to ensure strong spin
+		bodyAngularVelocity.Parent = character.PrimaryPart
+	
+		-- Unsit after 2 seconds
+		wait(2)
+		humanoid.Sit = false
+	
+		-- Clean up
+		bodyVelocity:Destroy()
+		bodyAngularVelocity:Destroy()
+	end)
+	
+end
+coroutine.wrap(DDXAA_fake_script)()
+local function HAEUK_fake_script() -- TextButton_6.Script 
+	local script = Instance.new('Script', TextButton_6)
+
+	local textbutton = script.Parent
+	
+	textbutton.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/RealZzHub/Main/main/Main.lua"))()
+	end)
+end
+coroutine.wrap(HAEUK_fake_script)()
+local function NUBD_fake_script() -- TextButton_7.Script 
+	local script = Instance.new('Script', TextButton_7)
+
+	local textbutton = script.Parent
+	
+	textbutton.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/refs/heads/main/script"))()
+	end)
+end
+coroutine.wrap(NUBD_fake_script)()
+local function DLJO_fake_script() -- TextButton_8.Script 
+	local script = Instance.new('Script', TextButton_8)
+
+	local textbutton = script.Parent
+	
+	textbutton.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/1price/usercreation/refs/heads/main/UserCreation.lua", true))()
+	end)
+end
+coroutine.wrap(DLJO_fake_script)()
